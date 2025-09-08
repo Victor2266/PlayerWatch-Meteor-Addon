@@ -19,11 +19,11 @@ Gradle for Java (by Microsoft)
 This extension allows VS Code to understand and interact with your build.gradle file. It's the key to making everything work.
 After installing, it might ask you to reload VS Code. Do it.
 
-### Step 4: Initial Gradle Sync
+### Step 3: Initial Gradle Sync
 When you open a folder with a build.gradle file for the first time, the Gradle extension will activate. You may see a notification in the bottom-right corner asking to import the Gradle project. Click "Import" or "Yes".
 VS Code will now download all the project dependencies specified in the build.gradle file. You can watch the progress in the TERMINAL panel. This will take a few minutes.
 
-### Step 5: Generate Minecraft Sources (The Most Critical Step)
+### Step 4: Generate Minecraft Sources (The Most Critical Step)
 This is the step that directly solves your "cannot be resolved" error. We need to tell Gradle to generate the human-readable Minecraft source code for VS Code to use.
 Click the Gradle icon on the left sidebar (it looks like an elephant or a "G"). This opens the Gradle Projects view.
 You will see your project name (PlayerWatchAddon). Expand it.
@@ -32,7 +32,7 @@ Expand fabric.
 Find the task named genSources.
 Click the play button next to genSources to run the task.
 This will run a command in the terminal. It can take several minutes to complete as it downloads Minecraft, applies the mappings, and generates the source code JAR. Be patient.
-### Step 6: Clean and Reload the Java Workspace
+### Step 5: Clean and Reload the Java Workspace
 After genSources is done, we need to force the Java extension to re-read everything and notice the new source code.
 Open the Command Palette using Ctrl+Shift+P (or Cmd+Shift+P on Mac).
 Type Java: Clean Java Language Server Workspace.
