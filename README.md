@@ -1,25 +1,44 @@
-# Meteor Addon Template
+# Player Watch Meteor Addon 
 
-A template to allow easy usage of the Meteor Addon API.
+### Part 1: Prerequisites (Things to Install First)
+Before you even open the project, you need the right foundation.
+Java Development Kit (JDK): Your fabric.mod.json specifies Java 21. You must have a JDK for this version (or newer) installed.
+To check your version: Open a terminal or Command Prompt and type java -version.
+To install: I recommend Eclipse Temurin from Adoptium. It's a trusted, free distribution of Java. Download and install the JDK 21 version.
+Visual Studio Code: Make sure you have the latest version installed from the official website.
+Git: You need this to clone the addon template.
 
-### How to use
+### Part 2: Essential VS Code Extensions
+VS Code needs specific extensions to understand a Java/Gradle project.
+Open VS Code.
+Go to the Extensions tab on the left sidebar (it looks like four squares).
+Search for and install the following two extensions:
+Extension Pack for Java (by Microsoft)
+This is a bundle of essential Java tools, including language support, debugging, and project management. It's non-negotiable.
+Gradle for Java (by Microsoft)
+This extension allows VS Code to understand and interact with your build.gradle file. It's the key to making everything work.
+After installing, it might ask you to reload VS Code. Do it.
 
-#### Use GitHub Template (Recommended)
+### Step 4: Initial Gradle Sync
+When you open a folder with a build.gradle file for the first time, the Gradle extension will activate. You may see a notification in the bottom-right corner asking to import the Gradle project. Click "Import" or "Yes".
+VS Code will now download all the project dependencies specified in the build.gradle file. You can watch the progress in the TERMINAL panel. This will take a few minutes.
 
-- Click the green `Use this template` button in the top right corner of this page.  
-  This will create a new repository with this template and a clean history.
-
-#### Clone Manually
-
-- Alternatively, clone this repository using these commands for a clean history:
-  ```bash
-  git clone --depth 1 https://github.com/MeteorDevelopment/meteor-addon-template your-addon-name
-  cd your-addon-name
-  rm -rf .git
-  git init
-  git add .
-  git commit -m "Initial commit from template"
-  ```
+### Step 5: Generate Minecraft Sources (The Most Critical Step)
+This is the step that directly solves your "cannot be resolved" error. We need to tell Gradle to generate the human-readable Minecraft source code for VS Code to use.
+Click the Gradle icon on the left sidebar (it looks like an elephant or a "G"). This opens the Gradle Projects view.
+You will see your project name (PlayerWatchAddon). Expand it.
+Expand Tasks.
+Expand fabric.
+Find the task named genSources.
+Click the play button next to genSources to run the task.
+This will run a command in the terminal. It can take several minutes to complete as it downloads Minecraft, applies the mappings, and generates the source code JAR. Be patient.
+### Step 6: Clean and Reload the Java Workspace
+After genSources is done, we need to force the Java extension to re-read everything and notice the new source code.
+Open the Command Palette using Ctrl+Shift+P (or Cmd+Shift+P on Mac).
+Type Java: Clean Java Language Server Workspace.
+Select that command and press Enter.
+A notification will pop up in the bottom-right corner asking you to reload and delete the history. Click "Restart and Delete".
+VS Code will reload.
 
 #### Development
 
