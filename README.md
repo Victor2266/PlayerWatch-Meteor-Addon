@@ -1,5 +1,7 @@
 # Player Watch Meteor Addon 
 
+## Development
+
 ### Part 1: Prerequisites (Things to Install First)
 Before you even open the project, you need the right foundation.
 Java Development Kit (JDK): Your fabric.mod.json specifies Java 21. You must have a JDK for this version (or newer) installed.
@@ -40,7 +42,10 @@ Select that command and press Enter.
 A notification will pop up in the bottom-right corner asking you to reload and delete the history. Click "Restart and Delete".
 VS Code will reload.
 
-#### Development
+### Step 6: To compile
+Open a terminal and type ```.\gradlew build``` to create the jar file
+It will be located in ```PlayerWatch-Meteor-Addon\build\libs```
+Drop it in the mods folder for fabric
 
 - Use this template to add custom modules, commands, HUDs, and other features to Meteor Client.
 - To test, run the `Minecraft Client` configuration in your IDE.
