@@ -5,6 +5,7 @@ import com.example.addon.modules.AutoLogin;
 import com.example.addon.modules.ProximityAlert;
 import com.example.addon.modules.AutoTrader;
 import com.example.addon.modules.CommandLooper;
+import com.example.addon.modules.AutoSeller;
 
 import com.mojang.logging.LogUtils;
 
@@ -28,6 +29,7 @@ public class PlayerWatchAddon extends MeteorAddon {
         Modules.get().add(new ProximityAlert());
         Modules.get().add(new AutoTrader());
         Modules.get().add(new CommandLooper());
+        Modules.get().add(new AutoSeller());
     }
 
     @Override
