@@ -153,6 +153,9 @@ Will constantly check for players near you that match players on the list, if it
 ### Auto Reconnect
 Will run a timer and log you back into the server for any reason, such as if you get kicked, if the server restarts and most importantly when the player watch module detects a player from the list and disconnects you. Auto reconnect will join back after a delay so player watch can check if the coast is clear and then auto login restarts the bot. So you can fully leave the setup afk.
 
+### Auto Seller
+Automatically sells items when your inventory is full.
+
 ### Auto Login
 Each time the bot joins it will run these commands. More reliable than the auto login found in meteor rejects.
 
