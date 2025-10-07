@@ -6,6 +6,7 @@ import com.example.addon.modules.ProximityAlert;
 import com.example.addon.modules.AutoTrader;
 import com.example.addon.modules.CommandLooper;
 import com.example.addon.modules.AutoSeller;
+import com.example.addon.modules.StationaryTimer;
 
 import com.mojang.logging.LogUtils;
 
@@ -13,6 +14,7 @@ import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
+
 import org.slf4j.Logger;
 
 public class PlayerWatchAddon extends MeteorAddon {
@@ -30,6 +32,7 @@ public class PlayerWatchAddon extends MeteorAddon {
         Modules.get().add(new AutoTrader());
         Modules.get().add(new CommandLooper());
         Modules.get().add(new AutoSeller());
+        Modules.get().add(new StationaryTimer());
     }
 
     @Override

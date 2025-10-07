@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "player-watch",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "name": "Player Watch",
   "description": "Automatically disconnects when a player from a specific list is online and tries to reconnect later.",
   "authors": [
